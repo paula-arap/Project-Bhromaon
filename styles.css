@@ -49,6 +49,7 @@ h1{
 form{
     padding-top: 70px;
     align-items: center;
+    position: relative;
 }
 input{
     min-width: 503px;
@@ -59,6 +60,9 @@ input{
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 2.8px;
+    float: left;
+    box-sizing: border-box;
+    border: none;
 }
 input:focus{
     background-color:antiquewhite;
@@ -67,7 +71,22 @@ input:focus{
     min-width: 153px;
     height: 63px;
     background-color: #5474FD;
-    border: white solid ;
+    border:2px solid white;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Aleo', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-search{
+    margin-right: 5px;
+    margin-left: 5px;
 }
 .scroll{
     display: flex;
@@ -86,6 +105,10 @@ input:focus{
     display: flex;
     justify-content: space-around;
     width: 600px;
+    overflow: hidden;
+}
+ul li a{
+    padding: 10px;
 }
 header{
     background-color: #5474FD;
@@ -121,19 +144,21 @@ header{
     display: flex;
     gap: 10px;
     flex-direction:column ;
+    max-width: 500px;
  }
  .why-us{
     display: flex;
     gap: 10px;
     flex-direction: column;
+    margin-right: 0;
  }
  .choose-us img{
     width: 350px;
     height: 220px;
  }
- .choose-us img:nth-of-type(1){
-    left:20px;
- }
+.lake{
+   margin-right: 150px;
+}
 .choose-us h2{
     font-family: 'Aleo', sans-serif;
     font-size: 36px;
@@ -158,12 +183,16 @@ header{
     min-height: 340px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .center{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     width: 1150px;
+    position: relative;
 }
 .text-design{
     color: #E8E8E8;
@@ -183,6 +212,11 @@ header{
 .flex{
     display: flex;
     flex-direction: column;
+    background: #333;
+}
+.shape{
+    position: absolute;
+    top: 17px;
 }
 /* section four */
 .house-background{
@@ -253,8 +287,7 @@ header{
 /* section six */
 .tourist-background{
     background-image: url(img/man.svg);
-    height: 731px;
-    
+    height: 731px;   
 }
 .tourist-background h2{
     color: #FFF;
@@ -282,14 +315,27 @@ header{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     line-height: 26px;
+    margin-left: 0;
 }
 .tourist-text p{
     font-size: 16px;
+    width: 590px;
 }
 .tourist-text h5{
     font-size: 20px;
     text-transform: uppercase;
     margin-left: 0;
+}
+i{
+    width: 30px;
+    font-size: 30px;
+    
+}
+.tourist-img{
+   margin-right: 0;
+}
+.tourist-img img{
+    height: 235px
 }
 /* footer */
 footer{
@@ -323,15 +369,78 @@ footer{
 button:hover{
     background-color: #5391FC;
 }
-@media screen and (max-width: 600px){
-    .header-items{
-     display: flex;
-     flex-direction: column;
-    }
-    a{
-        text-align: start;
-    }
-    .design{
-        display: none;
-    }
+button{
+    color: #FFF;
+    font-family: 'Aleo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
+@media screen and (max-width: 600px){
+    form{
+        text-align: center;
+    }
+    .button-search{
+        width: 70%;
+    }
+    input{
+        width: 100%;
+    }
+    .header-items{
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .choose-us h2{
+        width: 100%;
+        text-align: center;
+        top:20px;
+    }
+    .choose-us p{
+        text-align: center;
+    }
+    .choose-img
+    {
+        display: block;
+        text-align: center;
+    }
+    .lake, .mountains{
+        margin: 0;
+    }
+    .explore{
+        display: block;
+        width:100%;
+        padding: 15px;}
+   .style{
+    min-width: 100%;
+    left: 0%;
+   }
+   .center{
+        flex-direction: column;
+   }
+   .text-design {
+        font-size: 20px;
+        line-height: 40px;
+    }
+.center img {
+        width: 40px;
+        height: 39px;
+    }
+   .tourist-img img{
+    width: 100%;
+   }
+   .tourist-img{
+    display: contents;
+    justify-content: start;
+   }
+   .flex-tourist{
+    flex-direction: column;
+   }
+   .tourist-text p{
+    max-width: 485px;
+    margin: 0;
+   }
+}
+   
